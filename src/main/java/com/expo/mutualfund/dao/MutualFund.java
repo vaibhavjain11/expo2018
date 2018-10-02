@@ -2,6 +2,7 @@ package com.expo.mutualfund.dao;
 
 import java.util.List;
 
+import com.expo.mutualfund.constants.Risk;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -11,7 +12,9 @@ public class MutualFund {
 
 	private String name;
 	
-	private int risk;
+	private Risk risk;
+
+	private int counter;
 	
 	private List<Price> prices;
 
@@ -23,11 +26,11 @@ public class MutualFund {
 		this.name = name;
 	}
 
-	public int getRisk() {
+	public Risk getRisk() {
 		return risk;
 	}
 
-	public void setRisk(int risk) {
+	public void setRisk(Risk risk) {
 		this.risk = risk;
 	}
 
@@ -39,4 +42,11 @@ public class MutualFund {
 		this.prices = prices;
 	}
 
+	public int getCounter() {
+		return counter;
+	}
+
+	public void setCounter(int counter) {
+		this.counter = counter;
+	}
 }

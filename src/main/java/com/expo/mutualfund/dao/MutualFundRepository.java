@@ -9,4 +9,6 @@ import org.springframework.stereotype.Repository;
 public interface MutualFundRepository extends MongoRepository<MutualFund, Integer>{
 
 	List<MutualFund> findAllByName(String name);
+
+	MutualFund findByCounter(int counter);
 }
